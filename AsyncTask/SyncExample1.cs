@@ -11,7 +11,9 @@
 
         public static void IstruzioneB()
         {
-
+            Console.WriteLine("B Start");
+            Thread.Sleep(4000);
+            Console.WriteLine("B End");
         }
 
         public static void IstruzioneC()
