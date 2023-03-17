@@ -34,15 +34,15 @@ namespace AsyncTask
             });
         }
 
-        public static void Execute()
+        public static async Task Execute()
         {
-            Console.WriteLine("---------- Esecuzione Sincrona Esempio 1 ----------");
+            Console.WriteLine("---------- Esecuzione Asincrona Esempio 1 ----------");
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            AsyncIstruzioneA();
-            AsyncIstruzioneB();
-            AsyncIstruzioneC();
+            await AsyncIstruzioneA();
+            await AsyncIstruzioneB();
+            await AsyncIstruzioneC();
 
             stopwatch.Stop();
 
