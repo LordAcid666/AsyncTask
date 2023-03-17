@@ -1,4 +1,6 @@
-﻿namespace AsyncTask
+﻿using System.Diagnostics;
+
+namespace AsyncTask
 {
     public static class AsyncExample1
     {
@@ -30,6 +32,26 @@
                 Thread.Sleep(2000);
                 Console.WriteLine("C End");
             });
+        }
+
+        public static void Execute()
+        {
+            Console.WriteLine("---------- Esecuzione Sincrona Esempio 1 ----------");
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            AsyncIstruzioneA();
+            AsyncIstruzioneB();
+            AsyncIstruzioneC();
+
+            stopwatch.Stop();
+
+            TimeSpan ts = stopwatch.Elapsed;
+
+            string elapsedTime = string.Format("{0:00}.{1:00}", ts.Seconds, ts.Milliseconds);
+
+            Console.WriteLine("Tempo di esecuzione: " + elapsedTime);
+            Console.WriteLine("---------------------------------------------------");
         }
     }
 }
