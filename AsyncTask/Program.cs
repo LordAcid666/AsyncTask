@@ -2,4 +2,6 @@
 
 using AsyncTask;
 
-SyncExample1.Execute();
+// SyncExample1.Execute();
+
+SyncExample2.Execute();

@@ -1,4 +1,6 @@
-﻿namespace AsyncTask
+﻿using System.Diagnostics;
+
+namespace AsyncTask
 {
     public static class SyncExample2
     {
@@ -28,6 +30,26 @@
             int somma = inputIstruzioneA + inputIstruzioneB;
 
             Console.WriteLine($"C End - Risultato: {somma}");
+        }
+
+        public static void Execute()
+        {
+            Console.WriteLine("---------- Esecuzione Sincrona Esempio 1 ----------");
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            var resultA = IstruzioneA();
+            var resultB = IstruzioneB();
+            IstruzioneC(resultA, resultB);
+
+            stopwatch.Stop();
+
+            TimeSpan ts = stopwatch.Elapsed;
+
+            string elapsedTime = string.Format("{0:00}.{1:00}", ts.Seconds, ts.Milliseconds);
+
+            Console.WriteLine("Tempo di esecuzione: " + elapsedTime);
+            Console.WriteLine("---------------------------------------------------");
         }
     }
 }
