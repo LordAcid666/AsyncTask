@@ -34,7 +34,7 @@ namespace AsyncTask
 
         public static void Execute()
         {
-            Console.WriteLine("---------- Esecuzione Sincrona Esempio 1 ----------");
+            Console.WriteLine("---------- Esecuzione Sincrona Esempio 2 ----------");
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
