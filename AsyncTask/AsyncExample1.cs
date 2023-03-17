@@ -8,5 +8,16 @@
             Thread.Sleep(4000);
             Console.WriteLine("A End");
         }
+
+        public static Task AsyncIstruzioneA()
+        {
+            return Task.Run(() =>
+            {
+                Console.WriteLine("A Start");
+            Thread.Sleep(4000);
+            Console.WriteLine("A End");
+            });
+            
+        }
     }
 }
