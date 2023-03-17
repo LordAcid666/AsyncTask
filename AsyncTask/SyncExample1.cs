@@ -18,7 +18,9 @@
 
         public static void IstruzioneC()
         {
-
+            Console.WriteLine("C Start");
+            Thread.Sleep(4000);
+            Console.WriteLine("C End");
         }
 
         public static void Execute()
