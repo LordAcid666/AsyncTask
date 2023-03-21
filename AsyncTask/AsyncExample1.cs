@@ -77,5 +77,27 @@ namespace AsyncTask
             Console.WriteLine("Tempo di esecuzione: " + elapsedTime);
             Console.WriteLine("---------------------------------------------------");
         }
+
+        public static async Task Execute2()
+        {
+            Console.WriteLine("---------- Esecuzione Asincrona Esempio 3 ----------");
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            var task1 = AsyncIstruzioneA();
+            var task2 = AsyncIstruzioneB();
+            var task3 = AsyncIstruzioneC();
+
+            await Task.WhenAll(task1, task2, task3);
+
+            stopwatch.Stop();
+
+            TimeSpan ts = stopwatch.Elapsed;
+
+            string elapsedTime = string.Format("{0:00}.{1:00}", ts.Seconds, ts.Milliseconds);
+
+            Console.WriteLine("Tempo di esecuzione: " + elapsedTime);
+            Console.WriteLine("---------------------------------------------------");
+        }
     }
 }

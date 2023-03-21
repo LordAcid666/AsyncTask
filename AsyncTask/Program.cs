@@ -8,3 +8,4 @@ using AsyncTask;
 
 await AsyncExample1.Execute();
 await AsyncExample1.Execute1();
+await AsyncExample1.Execute2();
