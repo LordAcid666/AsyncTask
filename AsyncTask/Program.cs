@@ -7,3 +7,4 @@ using AsyncTask;
 // SyncExample2.Execute();
 
 await AsyncExample1.Execute();
+await AsyncExample1.Execute1();

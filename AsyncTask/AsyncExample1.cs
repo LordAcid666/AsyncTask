@@ -36,13 +36,37 @@ namespace AsyncTask
 
         public static async Task Execute()
         {
-            Console.WriteLine("---------- Esecuzione Asincrona Esempio 1 ----------");
+            Console.WriteLine("---------- Esecuzione Asincrona Esempio 2 ----------");
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
             await AsyncIstruzioneA();
             await AsyncIstruzioneB();
             await AsyncIstruzioneC();
+
+            stopwatch.Stop();
+
+            TimeSpan ts = stopwatch.Elapsed;
+
+            string elapsedTime = string.Format("{0:00}.{1:00}", ts.Seconds, ts.Milliseconds);
+
+            Console.WriteLine("Tempo di esecuzione: " + elapsedTime);
+            Console.WriteLine("---------------------------------------------------");
+        }
+
+        public static async Task Execute1()
+        {
+            Console.WriteLine("---------- Esecuzione Asincrona Esempio 1 ----------");
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            var task1 = AsyncIstruzioneA();
+            var task2 = AsyncIstruzioneB();
+            var task3 = AsyncIstruzioneC();
+
+            await task1;
+            await task2;
+            await task3;
 
             stopwatch.Stop();
 
