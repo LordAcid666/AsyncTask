@@ -36,7 +36,7 @@ namespace AsyncTask
 
         public static async Task Execute()
         {
-            Console.WriteLine("---------- Esecuzione Asincrona Esempio 2 ----------");
+            Console.WriteLine("---------- Esecuzione Asincrona Esempio 1 ----------");
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
@@ -56,7 +56,7 @@ namespace AsyncTask
 
         public static async Task Execute1()
         {
-            Console.WriteLine("---------- Esecuzione Asincrona Esempio 1 ----------");
+            Console.WriteLine("---------- Esecuzione Asincrona Esempio 2 ----------");
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
